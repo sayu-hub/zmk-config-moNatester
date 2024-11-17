@@ -54,9 +54,6 @@
         };
     };
 
-    //chosen {
-    //    zmk,charmap = &charmap_us;
-    //};
 
     //新たな動作を定義する
     behaviors {
@@ -77,11 +74,6 @@
             tap-ms = <20>;
         };
 
-        // hello_world: hello_world {
-        //     compatible = "zmk,behavior-send-string";
-        //     #binding-cells = <0>;
-        //     text = "Hello, world!";
-        // };
     };
 
     //キーマップ設定
@@ -126,7 +118,7 @@
             &kp LEFT_SHIFT  &kp LG(LS(LEFT_ARROW))  &trans          &kp LG(LS(RIGHT_ARROW))  &trans   &trans        &trans  &trans  &trans  &trans  &trans  &trans
             &trans                                                                           &trans   &trans        &trans  &trans  &trans  &trans  &trans  &trans
             >;
-
+            
             sensor-bindings = <&inc_dec_kp LC(PAGE_UP) LC(PAGE_DOWN)>;
         };
 

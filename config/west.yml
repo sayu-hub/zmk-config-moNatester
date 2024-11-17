@@ -6,8 +6,6 @@ manifest:
       url-base: https://github.com/sayu-hub
     - name: caksoylar  # <-- led
       url-base: https://github.com/caksoylar  
-    - name: joelspadin # <-- send-string
-      url-base: https://github.com/joelspadin
   projects:
     - name: zmk
       remote: zmkfirmware
@@ -18,9 +16,6 @@ manifest:
       revision: main
     - name: zmk-rgbled-widget  # <-- led
       remote: caksoylar
-      revision: main
-    - name: zmk-string  # <-- send-string
-      remote: joelspadin
       revision: main
   self:
     path: config

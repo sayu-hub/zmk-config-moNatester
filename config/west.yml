@@ -19,7 +19,7 @@ manifest:
     - name: zmk-rgbled-widget  # <-- led
       remote: caksoylar
       revision: main
-      - name: zmk-string  # <-- send-string
+    - name: zmk-string  # <-- send-string
       remote: joelspadin
       revision: send-string-behavior
   self:

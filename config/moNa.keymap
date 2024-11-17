@@ -77,11 +77,11 @@
             tap-ms = <20>;
         };
 
-        hello_world: hello_world {
-            compatible = "zmk,behavior-send-string";
-            #binding-cells = <0>;
-            text = "Hello, world!";
-        };
+        // hello_world: hello_world {
+        //     compatible = "zmk,behavior-send-string";
+        //     #binding-cells = <0>;
+        //     text = "Hello, world!";
+        // };
     };
 
     //キーマップ設定
@@ -133,7 +133,7 @@
         layer_4 {   //レイヤー4の時の設定
             bindings = <
             &trans  &trans  &kp LC(LS(TAB))         &kp LC(TAB)              &trans                     &trans  &trans  &trans  &trans  &trans
-            &trans  &trans  &kp LC(LG(LEFT_ARROW))  &kp LC(LG(RIGHT_ARROW))  <&hello_world>  &trans             &trans  &trans  &trans  &trans  &trans
+            &trans  &trans  &kp LC(LG(LEFT_ARROW))  &kp LC(LG(RIGHT_ARROW))  &trans  &trans             &trans  &trans  &trans  &trans  &trans
             &trans  &trans  &kp LG(LS(LEFT_ARROW))  &kp LG(LS(RIGHT_ARROW))  &trans  &trans     &trans  &trans  &trans  &trans  &trans  &trans
             &trans                                                           &trans  &trans     &trans  &trans  &trans  &trans  &trans  &trans
             >;

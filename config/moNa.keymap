@@ -8,6 +8,7 @@
 
 #define MOUSE 6
 
+//ホールドタップを設定
 &mt {
     flavor = "balanced";
     quick-tap-ms = <0>;

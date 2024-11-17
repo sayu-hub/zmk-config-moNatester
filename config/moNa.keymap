@@ -54,9 +54,9 @@
         };
     };
 
-    chosen {
-        zmk,charmap = &charmap_us;
-    };
+    //chosen {
+    //    zmk,charmap = &charmap_us;
+    //};
 
     //新たな動作を定義する
     behaviors {

@@ -49,7 +49,7 @@
         to_layer_0: to_layer_0 {
             compatible = "zmk,behavior-macro-one-param";
             #binding-cells = <1>;
-            bindings = <&to 0 &macro_param_1to1 &kp MACRO_PLACEHOLDER>;
+            bindings = <&to 0 &macro_param_1to1 &kp MACRO_PLACEHOLDER>; //レイヤー0を有効にし他を無効にする
             label = "TO_LAYER_0";
         };
     };
@@ -118,18 +118,17 @@
             &kp LEFT_SHIFT  &kp LG(LS(LEFT_ARROW))  &trans          &kp LG(LS(RIGHT_ARROW))  &trans   &trans        &trans  &trans  &trans  &trans  &trans  &trans
             &trans                                                                           &trans   &trans        &trans  &trans  &trans  &trans  &trans  &trans
             >;
-            
+
             sensor-bindings = <&inc_dec_kp LC(PAGE_UP) LC(PAGE_DOWN)>;
         };
 
         layer_4 {   //レイヤー4の時の設定
             bindings = <
-            &trans  &trans           &kp LC(LS(TAB))         &kp LC(TAB)              &trans                                           &trans  &trans  &trans  &trans  &trans
-            &trans  &LG(LEFT_ARROW)  &LG(RIGHT_ARROW)        &kp LC(LG(LEFT_ARROW))   &kp LC(LG(RIGHT_ARROW))   &trans                 &trans  &trans  &trans  &trans  &trans
-            &trans  &trans           &kp LG(LS(LEFT_ARROW))  &kp LG(LS(RIGHT_ARROW))  &trans                    &trans         &trans  &trans  &trans  &trans  &trans  &trans
+            &trans  &trans              &kp LC(LS(TAB))         &kp LC(TAB)              &trans                                           &trans  &trans  &trans  &trans  &trans
+            &trans  &kp LG(LEFT_ARROW)  &kp LG(RIGHT_ARROW)     &kp LC(LG(LEFT_ARROW))   &kp LC(LG(RIGHT_ARROW))   &trans                 &trans  &trans  &trans  &trans  &trans
+            &trans  &trans              &kp LG(LS(LEFT_ARROW))  &kp LG(LS(RIGHT_ARROW))  &trans                    &trans         &trans  &trans  &trans  &trans  &trans  &trans
             &trans                                                                    &trans                    &trans         &trans  &trans  &trans  &trans  &trans  &trans
             >;
-
         };
 
         layer_5 {   //レイヤー5の時の設定(スクロールレイヤー)

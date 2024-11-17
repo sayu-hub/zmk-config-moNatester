@@ -16,7 +16,7 @@ manifest:
       revision: main
     - name: zmk
       remote: sayu-hub
-      rebision: main
+      revision: main
     - name: zmk-rgbled-widget  # <-- led
       remote: caksoylar
       revision: main

@@ -7,7 +7,7 @@ manifest:
     - name: caksoylar  # <-- led
       url-base: https://github.com/caksoylar  
     - name: joelspadin # <-- send-string
-      url-base: https://github.com/joelspadin/zmk.git
+      url-base: https://github.com/joelspadin
   projects:
     - name: zmk
       remote: zmkfirmware

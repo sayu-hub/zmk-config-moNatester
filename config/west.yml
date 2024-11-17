@@ -8,8 +8,12 @@ manifest:
       url-base: https://github.com/caksoylar  
   projects:
     - name: zmk
-      remote: sayu-hub
-      revision: main  
+      remote: zmkfirmware
+      revision: feat/pointers-move-scroll
+      import: app/west.yml
+    # - name: zmk
+    #   remote: sayu-hub
+    #   revision: main  
     - name: zmk-pmw3610-driver  # <-- trackball
       remote: sayu-hub
       revision: main

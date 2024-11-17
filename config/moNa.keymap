@@ -54,6 +54,10 @@
         };
     };
 
+    chosen {
+        zmk,charmap = &charmap_us;
+    };
+
     //新たな動作を定義する
     behaviors {
         lt_to_layer_0: lt_to_layer_0 {
@@ -71,6 +75,12 @@
             bindings = <&msc SCRL_UP>, <&msc SCRL_DOWN>;
             // 追加: スクロールのタップ時間を設定 (20ms)
             tap-ms = <20>;
+        };
+
+        hello_world: hello_world {
+            compatible = "zmk,behavior-send-string";
+            #binding-cells = <0>;
+            text = "Hello, world!";
         };
     };
 
@@ -123,7 +133,7 @@
         layer_4 {   //レイヤー4の時の設定
             bindings = <
             &trans  &trans  &kp LC(LS(TAB))         &kp LC(TAB)              &trans                     &trans  &trans  &trans  &trans  &trans
-            &trans  &trans  &kp LC(LG(LEFT_ARROW))  &kp LC(LG(RIGHT_ARROW))  &trans  &trans             &trans  &trans  &trans  &trans  &trans
+            &trans  &trans  &kp LC(LG(LEFT_ARROW))  &kp LC(LG(RIGHT_ARROW))  <&hello_world>  &trans             &trans  &trans  &trans  &trans  &trans
             &trans  &trans  &kp LG(LS(LEFT_ARROW))  &kp LG(LS(RIGHT_ARROW))  &trans  &trans     &trans  &trans  &trans  &trans  &trans  &trans
             &trans                                                           &trans  &trans     &trans  &trans  &trans  &trans  &trans  &trans
             >;

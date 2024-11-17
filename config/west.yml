@@ -21,6 +21,6 @@ manifest:
       revision: main
     - name: zmk-string  # <-- send-string
       remote: joelspadin
-      revision: send-string-behavior
+      revision: main
   self:
     path: config

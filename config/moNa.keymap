@@ -8,7 +8,7 @@
 
 #define MOUSE 6
 
-//ホールドタップを設定
+//modtapの設定
 &mt {
     flavor = "balanced";
     quick-tap-ms = <0>;
@@ -50,8 +50,19 @@
         to_layer_0: to_layer_0 {
             compatible = "zmk,behavior-macro-one-param";
             #binding-cells = <1>;
-            bindings = <&to 0 &macro_param_1to1 &kp MACRO_PLACEHOLDER>; //レイヤー0を有効にし他を無効にする
+            bindings = <&to 0 &macro_param_1to1 &kp MACRO_PLACEHOLDER>; //レイヤー0を有効にして引数を入力
             label = "TO_LAYER_0";
+        };
+
+        zed_em_kay: zed_em_kay {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            //wait-ms = <10>; //初期待機時間
+            bindings
+                = <&macro_press &kp LSHFT>　// LSHIFTを押し続ける
+                , <&macro_tap &kp Z &kp M &kp K>　// z,m,kを入力
+                , <&macro_release &kp LSHFT>    // LSHIFTを離す
+                ;
         };
     };
 

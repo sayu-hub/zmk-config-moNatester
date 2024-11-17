@@ -62,6 +62,7 @@
                 , <&macro_tap &kp Z &kp M &kp K>　// z,m,kを入力
                 , <&macro_release &kp LSHFT>    // LSHIFTを離す
                 ;
+        };
     };
 
     //新たな動作を定義する

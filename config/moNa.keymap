@@ -69,12 +69,11 @@
             tapping-term-ms = <200>;
         };
 
-        scroll_up_down: behavior_sensor_rotate_mouse_wheel_up_down {
-            compatible = "zmk,behavior-sensor-rotate";
-            #sensor-binding-cells = <0>;
+        mouse_scroll: mouse_wheel_scrl{
+            compatible = "zmk,behavior-sensor-rotate-var";
+            #sensor-binding-cells = <2>;
             bindings = <&msc>, <&msc>;
             // 追加: スクロールのタップ時間を設定 (20ms)
-
             tap-ms = <20>;
         };
 
@@ -98,7 +97,7 @@
 &kp LCTRL                                  &lt 2 SPACE  &lt_to_layer_0 4 INT_MUHENKAN    &lt_to_layer_0 3 INT_HENKAN  &lt 1 ENTER  &kp BACKSPACE  &kp DEL  &kp LEFT_WIN  &kp LEFT_ALT
             >;
 
-            sensor-bindings = <&scroll_up_down SCRL_UP SCRL_DOWN>;
+            sensor-bindings = <&mouse_scroll SCRL_UP SCRL_DOWN>;
         };
 
         layer_1 {
@@ -109,7 +108,7 @@
             &trans                                                                 &trans                 &trans    &trans  &trans  &trans       &trans       &trans        &kp PIPE
             >;
 
-            sensor-bindings = <&scroll_up_down SCRL_LEFT SCRL_RIGHT>;
+            sensor-bindings = <&mouse_scroll SCRL_LEFT SCRL_RIGHT>;
         };
 
         layer_2 {
